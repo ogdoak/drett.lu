@@ -23,9 +23,25 @@
       line-height: 1;
       margin: 0;
     }
+    /* Wrap the 'e' so we can position the ellipsis above it */
+    .e-wrap {
+      position: relative;
+      display: inline-block;
+    }
+    .e-wrap .ellipsis {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -0.6em;          /* move above the character */
+      font-size: 0.45em;    /* smaller than the main text */
+      line-height: 1;
+      pointer-events: none;
+      color: inherit;
+      letter-spacing: normal;
+    }
   </style>
 </head>
 <body>
-  <h1 class="brand">Drett</h1>
+  <h1 class="brand">Dr<span class="e-wrap">e<span class="ellipsis">&hellip;</span></span>tt</h1>
 </body>
 </html>
